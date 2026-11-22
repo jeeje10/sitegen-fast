@@ -448,7 +448,6 @@ function findUnescaped(s, what, from) {
 
 /** The first single * from `from` (one whose run is not **), outside an escape, or -1. */
 function findSingleStar(s, from) {
-
   for (let j = from; j < s.length; j++) {
     const c = s[j];
     if (c === '\\' && j + 1 < s.length && ESCAPABLE.has(s[j + 1])) {
